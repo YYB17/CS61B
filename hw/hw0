@@ -1,0 +1,12 @@
+In this assignment, we will go through basic Java syntax concepts.
+
+Defining Functions(a.k.a. Methods): 
+
+Python
+    def max(x, y):
+    if (x > y):
+        return x
+    return y
+
+    print(max(5, 15))
+      
