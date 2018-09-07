@@ -2,11 +2,66 @@ In this assignment, we will go through basic Java syntax concepts.
 
 Defining Functions(a.k.a. Methods): 
 
-Python
-    def max(x, y):
-    if (x > y):
-        return x
-    return y
+    public static int max(int x, int y) {
+         if (x > y) {
+            return x;
+        }
+        return y;
+    }
 
-    print(max(5, 15))
-      
+    public static void main(String[] args) {
+        System.out.println(max(10, 15));
+    }
+    
+Arrays: 
+
+    int[] numbers = new int[3];
+    numbers[0] = 4;
+    numbers[1] = 7;
+    numbers[2] = 10;
+    System.out.println(numbers[1]);
+    
+    Or
+    
+    int[] numbers = new int[]{4, 7, 10};
+    System.out.println(numbers[1]);
+    
+    
+For Loops: 
+    public class ClassNameHere {
+    /** Uses a basic for loop to sum a. */
+        public static int sum(int[] a) {
+            int sum = 0;
+            for (int i = 0; i < a.length; i = i + 1) {
+             sum = sum + a[i];
+            }
+            return sum;
+        }
+    }
+    
+ Break and Continue: 
+    The continue statement skips the current iteration of the loop, effectively jumping straight to the increment condition. By contrast, 
+    the break keyword completely terminates the innermost loop when it is called. 
+    
+ The Enhanced For Loop:
+    The basic idea is that there are many circumstances where we don’t actually care about the index at all. 
+    In this case, we avoid creating an index variable using a special syntax involving a colon.
+    
+    in this case, we do not create an index i. 
+    Instead, the String s takes on the identity of each String in a exactly once, starting from a[0], all the way up to a[a.length - 1].
+
+    public class EnhancedForBreakDemo {
+        public static void main(String[] args) {
+            String[] a = {"cat", "dog", "laser horse", "ketchup", "horse", "horbse"};
+
+            for (String s : a) {
+                for (int j = 0; j < 3; j += 1) {
+                    System.out.println(s);
+                    if (s.contains("horse")) {
+                        break;
+                    }                
+                }
+            }
+        }
+    }
+    
